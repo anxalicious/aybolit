@@ -236,7 +236,7 @@ export class CXLMarketingNavElement extends LitElement {
         menuItem.appendChild(link);
 
         // eslint-disable-next-line no-param-reassign
-        self[i] = { component: menuItem };
+        self[i].component = menuItem;
       }
     });
 
@@ -251,7 +251,7 @@ export class CXLMarketingNavElement extends LitElement {
    */
   _updatedContextMenuItems() {
     this.contextMenuItems.forEach(menuItem => {
-      if (! menuItem.children) {
+      if (!menuItem.children) {
         return;
       }
 
