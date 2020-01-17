@@ -1,0 +1,80 @@
+h1 {
+  margin-top: 0;
+  font-size: 3em;
+}
+
+.red {
+  color: var(--lumo-primary-color);
+}
+
+.size-s {
+  width: var(--lumo-icon-size-s);
+  height: var(--lumo-icon-size-s);
+}
+
+.grey-bg {
+  padding: 2em;
+  background-color: var(--lumo-grey-color);
+}
+
+.data-box {
+  padding: 1em 4em;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: max-content;
+}
+
+.box {
+  width: 50%;
+  height: auto;
+  padding: 1em 2em;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  h3 {
+    font-size: larger;
+  }
+
+  .big {
+    font-size: 5em;
+  }
+
+  .bold {
+    font-weight: 900;
+  }
+
+  vaadin-button {
+    border: 2px solid var(--lumo-primary-color);
+  }
+}
+
+.box.inactive {
+  color: var(--lumo-secondary-text-color);
+
+  .bold {
+    font-weight: lighter;
+  }
+}
+
+.wrap {
+  position: relative;
+  max-width: var(--cxl-wrap-width, none);
+  padding: 0 var(--cxl-wrap-padding);
+  margin: 0 auto;
+}
+
+.wrap-narrow {
+  position: relative;
+  max-width: 45rem;
+  padding: 0 var(--cxl-wrap-padding);
+  margin: 0 auto;
+}

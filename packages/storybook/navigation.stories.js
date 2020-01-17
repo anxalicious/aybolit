@@ -2,6 +2,7 @@ import { html } from 'lit-html';
 import { useEffect } from '@storybook/client-api';
 import '@conversionxl/cxl-ui/src/components/cxl-marketing-nav.js';
 import contextMenuItems from './navigation.data.json';
+import '@conversionxl/cxl-ui/src/components/cxl-institute-pricing-table.js';
 
 export default {
   title: 'CXL Navigation'
@@ -19,12 +20,25 @@ export const CxlMarketingNav = () => {
     <cxl-marketing-nav id="menu-primary" class="menu menu-primary" role="navigation">
       <template id="cxl-marketing-nav-search-form-template">
         <vaadin-context-menu-item class="menu-item-search">
-          <form role="search" method="get" class="search-form" action="https://conversionxl.com/institute/?s=">
-              <label for="search-input">Search <em style="color: var(--lumo-primary-color);">C</em>XL Institute:</label>
-              <input id="search-input" type="search" class="search-field" value="" name="s">
-              <vaadin-button type="submit" class="search-submit" aria-label="Search" theme="icon" onclick="document.getElementById('search-form').submit();">
-                <iron-icon icon="lumo:angle-right"></iron-icon>
-              </vaadin-button>
+          <form
+            role="search"
+            method="get"
+            class="search-form"
+            action="https://conversionxl.com/institute/?s="
+          >
+            <label for="search-input"
+              >Search <em style="color: var(--lumo-primary-color);">C</em>XL Institute:</label
+            >
+            <input id="search-input" type="search" class="search-field" value="" name="s" />
+            <vaadin-button
+              type="submit"
+              class="search-submit"
+              aria-label="Search"
+              theme="icon"
+              onclick="document.getElementById('search-form').submit();"
+            >
+              <iron-icon icon="lumo:angle-right"></iron-icon>
+            </vaadin-button>
           </form>
         </vaadin-context-menu-item>
       </template>
@@ -75,7 +89,10 @@ export const CxlMarketingNav = () => {
           class="menu-item menu-item-split-nav menu-item-has-children menu-item-wide menu-item-search"
           theme="cxl-marketing-nav"
         >
-          <a><iron-icon icon="lumo:search"></iron-icon> Search <iron-icon icon="lumo:dropdown"></iron-icon></a>
+          <a
+            ><iron-icon icon="lumo:search"></iron-icon> Search
+            <iron-icon icon="lumo:dropdown"></iron-icon
+          ></a>
         </vaadin-tab>
       </vaadin-tabs>
 
@@ -94,7 +111,11 @@ export const CxlMarketingNav = () => {
           <a href="https://conversionxl.com/institute/dashboard/"
             >My dashboard <iron-icon icon="lumo:dropdown"></iron-icon
           ></a>
-          <vaadin-context-menu open-on="click" class="sub-menu" theme="cxl-marketing-nav"></vaadin-context-menu>
+          <vaadin-context-menu
+            open-on="click"
+            class="sub-menu"
+            theme="cxl-marketing-nav"
+          ></vaadin-context-menu>
         </vaadin-tab>
         <vaadin-tab
           id="menu-item-36"
@@ -105,7 +126,11 @@ export const CxlMarketingNav = () => {
             href="https://conversionxl.com/institute/online-courses/?_categories=minidegree-programs"
             >Minidegrees <iron-icon icon="lumo:dropdown"></iron-icon
           ></a>
-          <vaadin-context-menu open-on="click" class="sub-menu" theme="cxl-marketing-nav"></vaadin-context-menu>
+          <vaadin-context-menu
+            open-on="click"
+            class="sub-menu"
+            theme="cxl-marketing-nav"
+          ></vaadin-context-menu>
         </vaadin-tab>
         <vaadin-tab
           id="menu-item-37"
@@ -115,7 +140,11 @@ export const CxlMarketingNav = () => {
           <a href="https://conversionxl.com/institute/online-courses/"
             >Online courses <iron-icon icon="lumo:dropdown"></iron-icon
           ></a>
-          <vaadin-context-menu open-on="click" class="sub-menu" theme="cxl-marketing-nav"></vaadin-context-menu>
+          <vaadin-context-menu
+            open-on="click"
+            class="sub-menu"
+            theme="cxl-marketing-nav"
+          ></vaadin-context-menu>
         </vaadin-tab>
         <vaadin-tab class="menu-item" theme="cxl-marketing-nav"
           ><a href="https://conversionxl.com/institute/upcoming-courses/"
@@ -130,11 +159,19 @@ export const CxlMarketingNav = () => {
             ><iron-icon icon="lumo:plus"></iron-icon> Invite team</a
           ></vaadin-tab
         >
-        <vaadin-tab id="menu-item-41" class="menu-item menu-item-has-children" theme="cxl-marketing-nav"
+        <vaadin-tab
+          id="menu-item-41"
+          class="menu-item menu-item-has-children"
+          theme="cxl-marketing-nav"
           ><a href="https://conversionxl.com/institute/my-account/"
-            ><iron-icon icon="lumo:user"></iron-icon> My account <iron-icon icon="lumo:dropdown"></iron-icon
-            ></a>
-            <vaadin-context-menu open-on="click" class="sub-menu" theme="cxl-marketing-nav"></vaadin-context-menu>
+            ><iron-icon icon="lumo:user"></iron-icon> My account
+            <iron-icon icon="lumo:dropdown"></iron-icon
+          ></a>
+          <vaadin-context-menu
+            open-on="click"
+            class="sub-menu"
+            theme="cxl-marketing-nav"
+          ></vaadin-context-menu>
         </vaadin-tab>
         <vaadin-tab class="menu-item" theme="cxl-marketing-nav"><a>Help</a></vaadin-tab>
       </vaadin-tabs>
@@ -151,10 +188,15 @@ export const CxlMarketingNav = () => {
         }
       </style>
 
+      <cxl-pricing-table> </cxl-pricing-table>
+
       <div class="wrap">
-        <p>We need to test context menu items vs body links styling, so here's a <a href="https://cxl.com">link somewhere like cxl.com</a>.</p>
+        <p>
+          We need to test context menu items vs body links styling, so here's a
+          <a href="https://cxl.com">link somewhere like cxl.com</a>.
+        </p>
         <p><a href="https://cxl.com">Another link</a> for good measure.</p>
-        <hr>
+        <hr />
       </div>
     </main>
   `;
@@ -162,4 +204,28 @@ export const CxlMarketingNav = () => {
 
 CxlMarketingNav.story = {
   name: 'cxl-marketing-nav'
+};
+
+export const CxlPricingTable = () => {
+  return html`
+    <main>
+      <style>
+        /* @todo @include wrap mixin. */
+        .wrap {
+          margin: 0 auto;
+          max-width: var(--cxl-wrap-width, none);
+          padding: 0 var(--cxl-wrap-padding);
+          position: relative;
+        }
+      </style>
+
+      <div class="wrap">
+        <cxl-pricing-table> </cxl-pricing-table>
+      </div>
+    </main>
+  `;
+};
+
+CxlPricingTable.story = {
+  name: 'cxl-pricing-table'
 };

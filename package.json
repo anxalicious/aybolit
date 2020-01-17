@@ -26,6 +26,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "lit-element": "^2.2.1",
     "node-watch": "^0.6.2"
   },
   "devDependencies": {

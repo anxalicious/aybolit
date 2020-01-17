@@ -1,0 +1,10 @@
+:host([theme~="cxl-institute-pricing-table"]) [part="input-field"] {
+  height: 1.6em;
+  background-color: inherit;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+:host {
+  width: 6.5em;
+}
