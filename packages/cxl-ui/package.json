@@ -1,6 +1,6 @@
 {
   "name": "@conversionxl/cxl-ui",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "author": "CXL",
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
@@ -10,13 +10,14 @@
     "directory": "packages/cxl-ui"
   },
   "dependencies": {
-    "@conversionxl/cxl-lumo-styles": "^0.1.6",
+    "@conversionxl/cxl-lumo-styles": "^0.1.9",
     "@pika/pack": "^0.5.0",
-    "@pika/plugin-build-web": "^0.7.1",
-    "@pika/plugin-bundle-web": "^0.7.1",
-    "@pika/plugin-standard-pkg": "^0.7.1",
+    "@pika/plugin-build-web": "^0.8.1",
+    "@pika/plugin-bundle-web": "^0.8.1",
+    "@pika/plugin-standard-pkg": "^0.8.1",
     "@polymer/iron-pages": "^3.0.1",
     "@vaadin-component-factory/vcf-toggle-button": "^1.0.2",
+    "@vaadin/vaadin-accordion": "^1.0.1",
     "@vaadin/vaadin-button": "^2.2.1",
     "@vaadin/vaadin-combo-box": "^5.0.9",
     "@vaadin/vaadin-context-menu": "^4.3.14",
@@ -24,6 +25,7 @@
     "@vaadin/vaadin-tabs": "^3.0.5",
     "@vaadin/vaadin-text-field": "^2.5.3",
     "@vaadin/vaadin-themable-mixin": "^1.5.2",
+    "headroom.js": "^0.10.3",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
   },

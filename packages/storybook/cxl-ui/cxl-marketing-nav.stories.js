@@ -1,11 +1,12 @@
 import { html } from 'lit-html';
 import { useEffect } from '@storybook/client-api';
 import '@conversionxl/cxl-ui/src/components/cxl-marketing-nav.js';
-import contextMenuItems from './navigation.data.json';
 import '@conversionxl/cxl-ui/src/components/cxl-institute-pricing-table.js';
+import { Headroom } from '@conversionxl/cxl-ui';
+import contextMenuItems from './cxl-marketing-nav.data.json';
 
 export default {
-  title: 'CXL Navigation'
+  title: 'CXL UI'
 };
 
 export const CxlMarketingNav = () => {
@@ -14,8 +15,19 @@ export const CxlMarketingNav = () => {
     const cxlMarketingNavElement = document.querySelector('cxl-marketing-nav');
 
     cxlMarketingNavElement.contextMenuItems = contextMenuItems;
+
+    // headroom.js
+    const headroom = new Headroom(cxlMarketingNavElement, {
+      tolerance: {
+        up: 30,
+        down: 0
+      }
+    });
+
+    headroom.init();
   }, []);
 
+  // @todo https://github.com/43081j/eslint-plugin-lit/issues/63
   return html`
     <cxl-marketing-nav id="menu-primary" class="menu menu-primary" role="navigation">
       <template id="cxl-marketing-nav-search-form-template">
@@ -179,6 +191,11 @@ export const CxlMarketingNav = () => {
 
     <main>
       <style>
+        /* headroom.js */
+        body {
+          min-height: 3000px;
+        }
+
         /* @todo @include wrap mixin. */
         .wrap {
           margin: 0 auto;

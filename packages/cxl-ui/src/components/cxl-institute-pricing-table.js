@@ -1,9 +1,6 @@
 import { LitElement, html, customElement, property } from 'lit-element';
-import '@vaadin/vaadin-tabs';
-import './size-field';
-import './currency-box';
 import cxlPricingTableStyles from '../styles/cxl-institute-pricing-table-css.js';
-import '@vaadin-component-factory/vcf-toggle-button';
+import '@vaadin/vaadin-tabs';
 import '@vaadin/vaadin-ordered-layout';
 import '@polymer/iron-pages/iron-pages.js';
 
@@ -41,7 +38,6 @@ export class CXLPricingTable extends LitElement {
             <span class="red">Double</span> your<br />
             business
           </h1>
-
           <p>
             <span class="red"><iron-icon icon="lumo:angle-right" class="size-s"></iron-icon></span>
             Guaranteed return on time spent or money back.
@@ -53,8 +49,6 @@ export class CXLPricingTable extends LitElement {
         </div>
       </div>
       <div class="wrap-narrow">
-        <currency-box></currency-box>
-
         <vaadin-tabs
           ?selected="${this.page}"
           @selected-changed="${e => {
@@ -68,11 +62,7 @@ export class CXLPricingTable extends LitElement {
 
         <iron-pages selected="${this.page}">
           <page>
-            <vaadin-horizontal-layout class="data-box">
-              <div class="block">
-                Payment cycle: Annual <vcf-toggle-button checked></vcf-toggle-button> Monthly
-              </div>
-            </vaadin-horizontal-layout>
+            <vaadin-horizontal-layout class="data-box"> </vaadin-horizontal-layout>
 
             <vaadin-horizontal-layout>
               <div class="box">
@@ -139,10 +129,7 @@ export class CXLPricingTable extends LitElement {
 
           <page>
             <vaadin-horizontal-layout class="data-box">
-              <div class="block">
-                Payment cycle: Annual <vcf-toggle-button checked></vcf-toggle-button> Monthly
-              </div>
-              <div class="block">Team size: <size-field></size-field></div>
+              <div class="block">Team size:</div>
             </vaadin-horizontal-layout>
 
             <vaadin-horizontal-layout>

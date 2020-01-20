@@ -1,4 +1,6 @@
 import { registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+import cxlVaadinAccordionStyles from './styles/themes/vaadin-accordion-css.js';
+import cxlVaadinAccordionPanelStyles from './styles/themes/vaadin-accordion-panel-css.js';
 import cxlVaadinContextMenuItemStyles from './styles/themes/vaadin-context-menu-item-css.js';
 import cxlVaadinContextMenuListBoxStyles from './styles/themes/vaadin-context-menu-list-box-css.js';
 import cxlVaadinOverlayStyles from './styles/themes/vaadin-overlay-css.js';
@@ -9,6 +11,12 @@ import cxlVaadinComboBoxStyles from './styles/themes/vaadin-combo-box-css.js';
 import cxlVaadinTextFieldStyles from './styles/themes/vaadin-text-field-css';
 
 /* Mixins */
+registerStyles('vaadin-accordion', cxlVaadinAccordionStyles, {
+  moduleId: 'cxl-vaadin-accordion-styles'
+});
+registerStyles('vaadin-accordion-panel', cxlVaadinAccordionPanelStyles, {
+  moduleId: 'cxl-vaadin-accordion-panel-styles'
+});
 registerStyles('vaadin-context-menu-item', cxlVaadinContextMenuItemStyles, {
   moduleId: 'cxl-vaadin-context-menu-item-styles'
 });
