@@ -4,6 +4,7 @@ import './icons.js';
 import './themes.js';
 import { registerGlobalStyles } from './utils.js';
 import globalStyles from './styles/global-css.js';
+import './cxl-vaadin-button.js';
 
 registerGlobalStyles(globalStyles, {
   moduleId: 'cxl-lumo-styles-global'
