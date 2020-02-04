@@ -1,10 +1,9 @@
-import '@conversionxl/cxl-lumo-styles/src/cxl-vaadin-button';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
 
 export default {
   decorators: [withKnobs],
-  title: 'CXL Vaadin Button Styles'
+  title: 'CXL Lumo Styles|Elements'
 };
 
 export const LinkVaadinButton = () => {
@@ -19,5 +18,5 @@ export const LinkVaadinButton = () => {
 };
 
 LinkVaadinButton.story = {
-  name: 'cxl-vaadin-button'
+  name: '.vaadin-button'
 };
