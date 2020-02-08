@@ -1,6 +1,6 @@
-@mixin wrap {
+@mixin wrap($max-width: var(--cxl-wrap-width, none)) {
   position: relative;
-  max-width: var(--cxl-wrap-width, none);
+  max-width: $max-width;
   padding-right: var(--cxl-wrap-padding);
   padding-left: var(--cxl-wrap-padding);
   margin-right: auto;
