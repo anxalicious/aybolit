@@ -74,7 +74,7 @@
     transform: scale(0);
   }
 
-  &[theme="primary"] {
+  &[theme~="primary"] {
     min-width: calc(var(--lumo-button-size) * 2.5);
     font-weight: 600;
     color: var(--_lumo-button-primary-color, var(--lumo-primary-contrast-color));
@@ -98,13 +98,13 @@
     }
   }
 
-  &[theme="small"] {
+  &[theme~="small"] {
     font-size: var(--lumo-font-size-s);
 
     --lumo-button-size: var(--lumo-size-s);
   }
 
-  &[theme="large"] {
+  &[theme~="large"] {
     font-size: var(--lumo-font-size-l);
 
     --lumo-button-size: var(--lumo-size-l);
