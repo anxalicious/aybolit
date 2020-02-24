@@ -2,6 +2,8 @@
   line-height: var(--lumo-line-height-m);
 }
 
+$switch-size-var: 1.25rem;
+
 .input {
   &:focus {
     + .label {
@@ -21,31 +23,31 @@
       &::after {
         background: var(--lumo-primary-color);
         border-color: var(--lumo-primary-color);
-        transform: translateX(7px);
+        transform: translateX($switch-size-var / 2.5);
       }
     }
   }
 }
 
 .label {
-  padding-left: 3.5rem;
+  padding-left: $switch-size-var * 3;
   font-family: var(--lumo-font-family);
   font-size: var(--lumo-font-size-m);
 
   &::before {
-    width: 30px;
-    height: 14px;
-    margin: 5px 0 5px 10px;
+    width: $switch-size-var * 1.5;
+    height: $switch-size-var / 1.4;
+    margin: $switch-size-var / 4 0 $switch-size-var / 4 $switch-size-var / 2;
     background: var(--lumo-shade-50pct);
     border: solid 1px var(--lumo-shade-10pct);
-    border-radius: 7px;
+    border-radius: $switch-size-var * 2;
   }
 
   &::after {
-    top: 2px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
+    top: $switch-size-var / 10;
+    right: $switch-size-var;
+    width: $switch-size-var;
+    height: $switch-size-var;
     background: var(--lumo-base-color);
     border: solid 1px var(--lumo-shade-30pct);
     box-shadow: var(--lumo-box-shadow-xs);

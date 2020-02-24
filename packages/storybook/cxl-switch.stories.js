@@ -4,11 +4,11 @@ import '@conversionxl/cxl-ui/src/components/cxl-switch.js';
 
 export default {
   decorators: [withKnobs],
-  title: 'CXL Lumo Styles|Elements'
+  title: 'CXL UI'
 };
 
 export const CxlSwitch = () => {
-  const label = text('Label', 'Dark mode');
+  const label = text('Label', 'Switch me');
 
   return html`
     <cxl-switch checked>${label}</cxl-switch>
@@ -16,5 +16,5 @@ export const CxlSwitch = () => {
 };
 
 CxlSwitch.story = {
-  name: '<cxl-switch>'
+  name: 'cxl-switch'
 };
