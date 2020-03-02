@@ -104,3 +104,74 @@ cxl-institute-layout {
     }
   }
 }
+cxl-institute-layout[theme~="blog-post"] {
+  > .entry {
+    .entry-header {
+      margin-bottom: var(
+        --lumo-space-xl
+      ) !important; /* stylelint-disable-line declaration-no-important */
+
+      label {
+        font-size: var(--lumo-font-size-l);
+        color: var(--lumo-primary-color);
+      }
+
+      .avatar {
+        border-radius: 50%;
+      }
+
+      .author-image {
+        float: left;
+        margin-right: var(--cxl-wrap-padding);
+      }
+
+      .blog-byline {
+        font-size: var(--lumo-font-size-xl);
+      }
+
+      .entry-author {
+        padding: var(--lumo-space-l) 0;
+        border-bottom: 1px solid var(--lumo-contrast-50pct);
+
+        /* stylelint-disable-next-line selector-max-compound-selectors */
+        span {
+          display: block;
+        }
+      }
+    }
+
+    > * {
+      font-size: var(--lumo-font-size-l);
+    }
+  }
+
+  > .widget {
+    padding: var(--cxl-wrap-padding);
+
+    &#widget-webinar {
+      color: var(--lumo-base-color);
+      background-color: var(--lumo-contrast);
+    }
+
+    &#widget-video-course {
+      background-color: var(--lumo-shade-10pct);
+    }
+  }
+
+  &[wide] {
+    --cxl-wrap-padding: var(--lumo-space-l);
+
+    .entry-title {
+      margin-top: var(--lumo-space-m);
+      font-size: var(--cxl-lumo-font-size-hero);
+    }
+
+    > .entry {
+      .entry-header {
+        max-width: var(--cxl-content-width);
+        padding: 0 var(--cxl-wrap-padding);
+        margin: 0 auto;
+      }
+    }
+  }
+}
