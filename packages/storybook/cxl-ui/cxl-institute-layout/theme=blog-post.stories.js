@@ -1,16 +1,15 @@
 import { html } from 'lit-html';
-import '@conversionxl/cxl-ui/src/components/cxl-blog-post-layout.js';
+import '@conversionxl/cxl-ui/src/components/cxl-institute-layout.js';
 import '@conversionxl/cxl-ui/src/components/cxl-marketing-nav.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import blogPostData from './cxl-blog-post-layout.data.json';
 
 export default {
-  title: 'CXL UI'
+  title: 'CXL UI|cxl-institute-layout'
 };
-
-export const CxlBlogPostLayout = () => {
+export const CxlInstituteLayoutThemeBlogPost = () => {
   return html`
-    <cxl-blog-post-layout id="container">
+    <cxl-institute-layout theme="blog-post" id="container">
       <cxl-marketing-nav slot="header">
         <vaadin-tabs
           id="menu-primary-items"
@@ -98,10 +97,10 @@ export const CxlBlogPostLayout = () => {
           </section>
         `
       )}
-    </cxl-blog-post-layout>
+    </cxl-institute-layout>
   `;
 };
 
-CxlBlogPostLayout.story = {
-  name: 'cxl-blog-post-layout'
+CxlInstituteLayoutThemeBlogPost.story = {
+  name: 'theme=blog-post'
 };

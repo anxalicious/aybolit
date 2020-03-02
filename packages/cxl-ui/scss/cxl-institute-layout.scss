@@ -153,3 +153,53 @@ main {
   }
 }
 /* stylelint-enable no-duplicate-selectors */
+
+/**
+ * Theme "blog-post".
+ */
+:host([theme~="blog-post"][wide]) {
+  $cxl-institute-layout-drawer-width: 16em;
+
+  aside {
+    order: 2;
+    height: initial;
+    padding: 10em var(--cxl-wrap-padding) 0 var(--cxl-wrap-padding);
+
+    &[opened] {
+      + main {
+        [icon="#{$toggle-icon}"] {
+          transform: unset;
+        }
+
+        /* stylelint-disable-next-line selector-max-type */
+        > vaadin-button {
+          transform: translate3d(
+            $cxl-institute-layout-drawer-width * -1 - 2em,
+            calc(var(--lumo-space-l) / 1.25),
+            0
+          );
+        }
+      }
+    }
+  }
+
+  main {
+    order: 1;
+    box-shadow: none;
+
+    [icon="#{$toggle-icon}"] {
+      transform: rotate(180deg);
+    }
+  }
+
+  vaadin-button {
+    right: 0;
+    background-color: var(--lumo-shade-10pct);
+    border-right: solid 1px var(--lumo-contrast-10pct);
+    transform: translate3d(
+      calc(-1 * (var(--lumo-space-xl) + 8px)),
+      calc(var(--lumo-space-l) / 1.25),
+      0
+    );
+  }
+}
