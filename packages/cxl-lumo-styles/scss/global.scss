@@ -1,3 +1,6 @@
+/** Integrations. */
+@use 'integrations/vaadin-button.scss';
+
 html {
   // Variables.
   --cxl-content-width: 36em;

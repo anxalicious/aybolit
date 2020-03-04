@@ -1,0 +1,112 @@
+/**
+ * @see https://github.com/vaadin/vaadin-button/issues/142
+ * @see https://github.com/vaadin/vaadin-button/blob/master/theme/lumo/vaadin-button-styles.html
+ * @see https://github.com/vaadin/vaadin-button/blob/master/src/vaadin-button.html
+ */
+
+.vaadin-button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(var(--lumo-button-size) * 2);
+  height: var(--lumo-button-size);
+
+  --lumo-button-size: var(--lumo-size-m);
+  padding: calc(var(--lumo-button-size) / 6)
+    calc(var(--lumo-button-size) / 3 + var(--lumo-border-radius) / 2);
+  margin: var(--lumo-space-xs) 0;
+  font-family: var(--lumo-font-family);
+  font-size: var(--lumo-font-size-m);
+  font-weight: 500;
+  line-height: var(--lumo-line-height-xs);
+  color: var(--lumo-primary-text-color);
+  text-align: center;
+  cursor: default;
+  background-color: var(--_lumo-button-background-color, var(--lumo-contrast-5pct));
+  border-radius: var(--lumo-border-radius);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::before,
+  &::after {
+    /* We rely on the host always being relative */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+    background-color: currentColor;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &[href]:hover {
+    text-decoration: none;
+
+    &::before,
+    &::after {
+      background-color: var(--lumo-primary-color-50pct);
+      opacity: 0.05;
+    }
+  }
+
+  &::after {
+    filter: blur(8px);
+    transition: opacity 1.4s, transform 0.1s;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+    transition-duration: 0s;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+    transition-duration: 0s, 0s;
+    transform: scale(0);
+  }
+
+  &[theme~="primary"] {
+    min-width: calc(var(--lumo-button-size) * 2.5);
+    font-weight: 600;
+    color: var(--_lumo-button-primary-color, var(--lumo-primary-contrast-color));
+    background-color: var(--_lumo-button-primary-background-color, var(--lumo-primary-color));
+
+    &:hover {
+      opacity: 0.9;
+
+      &::before,
+      &::after {
+        background-color: var(--lumo-shade-20pct);
+      }
+    }
+
+    &:active::before {
+      background-color: var(--lumo-shade-20pct);
+    }
+
+    &:active::after {
+      opacity: 0.2;
+    }
+  }
+
+  &[theme~="small"] {
+    font-size: var(--lumo-font-size-s);
+
+    --lumo-button-size: var(--lumo-size-s);
+  }
+
+  &[theme~="large"] {
+    font-size: var(--lumo-font-size-l);
+
+    --lumo-button-size: var(--lumo-size-l);
+  }
+}
